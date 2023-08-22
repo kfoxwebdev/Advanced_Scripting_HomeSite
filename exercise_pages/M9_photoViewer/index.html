@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Ajax Exercise</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A link to a photo-viewer page that uses Ajax.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Ajax Exercise</h3>
+    
+    <p>Ajax or Asynchronous JavaScript and XML is a technique that allows developers to update a webpage with data from a web server without reloading the page. To send a request, JavaScript uses a browser object called the XMLHttpRequest (XHR) object or it can use Fetch API. These requests are often made to web services which provide Application Programming Interfaces or API.</p>
+      
+    <p>The way a normal HTTP makes a request is the browser makes an HTTP request for an entire page, the server returns an HTTP response for the page, and the browser loads the entire page. With an Ajax request the browser uses JavaScript to send an asynchronous request to the server, the server returns the requested data in a response, and the web page uses JavaScript to update the DOM with new data. This means the browser doesn't need to refresh the page to add the data.</p>
+      
+    <p>The two most common data formats for Ajax are XML (Extensible Markup Language) and JSON (JavaScript Object Notation). Both of these formats use text to store and transmit data. Out of the two, JSON is more popular because it's more human friendly to read. This is also why you will see a lot of server-side languages provide methods for encoding data into JSON. JSON also uses less memory than XML because it is more succinct.</p>
+      
+    <p>API's are constructs made available in programming languages to allow developers to more easily create complex functionality. Fetch API is considered the best practice for new development. Fetch API uses the fetch(url) method to make an asynchronous GET request to the URL. It then returns a Promise object that will eventually return a Response object. A promise object has three states: pending, fulfilled, and rejected. The Promise object is pending when it is first created, fulfilled when it returns a value, and rejected if an error occurs. Whether it returns a value or an error, it is considered settled. Response objects use the method json(). This method returns a Promise object that eventually resolves to a JavaScript object that's created from the JSON that's returned by the asynchronous request.</p>
+       
+    <p>In this exercise, we used Ajax to fetch data from an API containing lots of photos and some info about each photo. The page allows users to select which photo they want to view.</p>
+        
+    <p><a href="photo_viewer/index.html" target="_blank">Click here to test the photo-viewer!</a></p>
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

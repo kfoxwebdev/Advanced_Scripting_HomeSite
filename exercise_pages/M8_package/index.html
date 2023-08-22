@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox NPM Package Exercise</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js and use a packge with NPM.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Scripting Exercise with Node.js and NPM Packages</h3>
+    
+    <p>NPM (Node Package Manager) manages Node.js packages, such as http-server and file-system which we used previously. A module simply means an external file that can be used by another file. A Package is a folder tree or a collection of modules described by a package.json file. The package.json tells node.js which modules to install to the project folder.</p>
+       
+    <p>To create a package we open the console, change the directory to the desired folder, and run the code "npm init". Node.js automatically asks a series of questions (that we can answer or skip) and then it creates a package.json file in the root directory. To add dependencies (such as the Lodash library), we would run "npm i lodash" in the console. This also creates a folder ("node_modules") to store them in the root folder.</p>
+        
+    <p>This is exactly what we did in this exercise. We also added a dev dependency called nodemon, which lets us run our script every time we save any changes. Additionally, we edited the "scripts" section of our package.json so that we can assign keywords to run code in the console. This is all showcased in the screenshot of our package.json file below.</p>
+        
+    <img class="globalpage__resizeImg" alt="" src="images/packageJSON800.png">
+    
+    <p>To make use of our package and its dependencies, we made a quick script, kfox_app.js (pictured below). kfox_app.js creates a couple of arrays, then uses the lodash library to process info from the arrays and console.log the results.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/appJS800.png">
+    
+    <p>While working on kfox_app.js, nodemon helped us instantly see the output any time we saved changes. Below is a screenshot of the console running our completed script. As you can see, we can run kfox_app.js by entering "npm start" which is one of the keywords we had added to the package.json file.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+    
+    
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>
