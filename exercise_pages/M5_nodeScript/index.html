@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Node.js Exercise</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Scripting Exercise with Node.js</h3>
+    
+    <p>Node.js is a JavaScript runtime environment that can run scripts or other applications outside of a browser. It's a useful way to test script/code without creating a full webpage to run them. After installing Node.js writing a script, users can open the Command Prompt window to get started. Then, type "cd" (change directory) and drag the folder containing the script to be tested. Finally, type "node " followed by the file-name of the script. Node.js runs the script and displays any results in the Command Prompt window. We'll take a look some examples from this exercise below.</p>
+    
+    
+    <h4>Version One</h4>
+        
+        <p>We made a short script called M05_Ex.js that uses a quick function and console.log to display various messages. At the bottom of the script, we call the function to write out a couple of those messages. The code for the script is displayed here. </p>
+        
+        <img
+            alt=""
+            src="images/script1_code800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/script1_code500.png 500w,
+                    images/script1_code800.png 800w"
+        >
+        
+        <p>Next, we ran the script using the Command Prompt window and Node.js as described at the beginning of this page. The below screenshot shows that the script successfully displayed the messages we told it to.</p>
+        
+        <img
+            alt=""
+            src="images/script1_result800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/script1_result500.png 500w,
+                    images/script1_result800.png 800w"
+        >
+    
+    <h4>Version Two</h4>
+        
+        <p>In the second version, we added to our original variables and script. We stored each message (variable) in an array. We also created a variable called "$states" and set it to the number 1. We kept the same function from before, but we called it a different way. Specifically, we used a while-loop to call the function for each of our messages. The while loop also increases the number assigned to $states during each iteration. Finally, a conditional operator displays different messages based on how many statements there are. If the conditional statement in the parenthesis ($states > 2) is true, it returns the first message. If the conditional statement is false, the second message is returned. Finally, we use console.log to display whichever message was generated by the conditional operator. </p>
+        
+        <img
+            alt=""
+            src="images/script2_code800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/script2_code500.png 500w,
+                    images/script2_code800.png 800w"
+        >
+        
+        <p>Below, we see the result when the script is run in the Command Prompt window with Node.js.</p>
+        
+        <img
+            alt=""
+            src="images/script2_result800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/script2_result500.png 500w,
+                    images/script2_result800.png 800w"
+        >
+    
+    
+    <h4>Final Script(s)</h4>
+        
+        <p>In the final version, we actually created three separate scripts and combined them all together. First, we made a script called messages.js to contain our message-variables. The last line of code makes the file's contents exportable so it can be combined with the others.</p>
+        
+        <img
+            alt=""
+            src="images/messages_code800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/messages_code500.png 500w,
+                    images/messages_code800.png 800w"
+        >
+        
+        <p>The second script is called func.js and it holds our function that displays a message in the console-log. Again, the last line of code makes the script exportable.</p>
+        
+        <img
+            alt=""
+            src="images/func_code600.png"
+            sizes="(min-width: 800px) 600px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/func_code500.png 500w,
+                    images/func_code600.png 600w"
+        >
+        
+        <p>Our final script is called app.js. It calls the function and uses a while loop to iterate through each message, then one of two statements based on the number of messages (just like Version Two). However, this script requires the contents of messages.js and func.js before the rest of the code, so that their contents can be used. This way, the scripts work the same way as Version Two, but the various aspects of the code are sorted into separate files. </p>
+        
+        <img
+            alt=""
+            src="images/app_code800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/app_code500.png 500w,
+                    images/app_code800.png 800w"
+        >
+        
+        <p>Below, we see the result.</p>
+        
+        <img
+            alt=""
+            src="images/app_result800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/app_result500.png 500w,
+                    images/app_result800.png 800w"
+        >
+    
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>
