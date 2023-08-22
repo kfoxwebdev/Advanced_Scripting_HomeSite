@@ -1,0 +1,372 @@
+
+
+/* Components: used on most pages, but only once per page */
+
+
+/* ---------- Header styles ---------- */
+
+.globalPage__header {
+    width: 100%;
+    background-color: $myDarkBlue;
+    background-image: url(../images/slashPatternYellowOrange2.svg);
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: space-around;
+}
+
+.globalPage__headerLogo {
+    max-width: 4rem;
+    margin: .75rem;
+}
+    //logo size on bigger screens
+    @include responsive(650px) {
+        .globalPage__headerLogo {
+            max-width: 5rem;
+            //margin: .75rem;
+            }
+    }
+
+/*
+.globalPage__headerForgroundSVG {
+    background-size: cover;
+    background-image: url(../images/headerForground.svg);
+}
+*/
+
+.globalPage__header--homePage {
+    height: 23rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.globalPage__headerLogo-home {
+    max-width: 10rem;
+}
+
+
+/* ---------- main nav bar positioning & styles ---------- */
+
+    //see "layout" section for rules to make navbar horizontal on larger screens
+
+.globalPage__navBarSticky {
+//makes the Nav bar stick to the top of the screen as users scroll down
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+} 
+
+.globalPage__primaryNav {
+    background-color: $myWhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 2.5rem;
+    box-shadow: 0 .15rem .75rem .1rem $shadowColor;
+}
+
+.globalPage__primaryNavList {
+	list-style-type: none;
+    padding-left: 0;
+	position: absolute;
+    background-color: $myWhite;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	transform: translateY(-100%); //this positions the nav menu offscreen (above the top) until the "navSlide" Javascript function adds the "active" class below
+    transition: transform 0.5s ease-in-out;
+    
+        // these rules control how the menu-items' background-colors change on hover/click
+        li {
+            a {
+                &:hover {
+                    background-color: darken($myWhite, 5%);
+                    transition: all 0.1s ease-in-out;
+                    }	
+
+                &:active {
+                    background-color: darken($myWhite, 10%);
+                    transition: all 0.1s ease-in-out;
+                }
+            }
+        }
+}
+
+    // the "navSlide" Javascript function adds this class to the main navbar to open the list of menu-items
+        .globalPage__primaryNavList--active {
+        transform: translateY(5rem);
+        }
+
+    //these rules create the look of a "menu button" without having to use an icon or svg
+        .globalPage__primaryNavburger div {
+            width: 25px;
+            height: 3px;
+            background-color: $myDarkBlue;
+            margin: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .globalPage__primaryNavburger {
+            padding: .25em;
+            display: block;
+            cursor: pointer;
+            &:hover {
+                    background-color: darken($myWhite, 5%);
+                    transition: all 0.1s ease-in-out;
+                }
+        }
+
+    // these classes allow the "hamburger menu" to change into an "x" shape when it's toggled.
+        .burgerX .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .burgerX .line2 {
+            opacity: 0;
+        }
+        .burgerX .line3 {
+            transform: rotate(45deg) translate(-5px, -6px); 
+        }
+
+
+
+/* ---------- Call to Action (on homepage) ---------- */
+
+.globalPage__call2action {
+    margin: 2rem 0;
+}
+
+.call2action__linkArea {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-left: .2rem solid $myOrange;
+}
+
+.call2action__linkButton {
+    color: $myDarkBlue;
+    background-color: $myYellow;
+    width: 6rem;
+    padding: .8rem 0;
+    border-radius: 100%;
+    box-shadow: 0 0 .5rem .1rem $shadowColor;
+    transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: lighten($myYellow, 10%);
+            transform: scale(1.05);
+        }	
+        &:active {
+            background-color: darken($myYellow, 5%);
+        }
+}
+
+.call2action__descArea {
+    background-color: $myLightGray;
+    padding: 1rem;
+    border-bottom: .2rem solid $myOrange;
+}
+
+
+
+/* ---------- Footer styles ---------- */
+
+.globalPage__footer {
+    color: $myDarkBlue;
+    background-color: $myLightGray;
+}
+
+
+
+/* ---------- M2 jQuery Intro Project ---------- */
+
+    // tabs rules
+
+.m2Page__tabsHolder {
+    background-color: $myLightGray;
+    padding: 1rem;
+}
+
+.m2Page__tabsHolder h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.m2Page__tabsHolder h4 {
+    background-color: $myWhite;
+    color: $myDarkBlue;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: .5rem;
+    border-bottom: .1rem solid $myOrange;
+    transition: all 0.1s ease-in-out;
+    img {
+        max-width: .8rem;
+        transition: all 0.1s ease-in-out;
+    }
+    &:hover { 
+        background-color: darken($myWhite, 10%);
+        img {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.m2Page__tabContents {
+    display: none;
+    background-color: $myWhite;
+    margin-top: -1.7rem;
+    padding: 1rem;
+    border-left: .1rem solid $myOrange;
+    p {
+        margin-top: 0;
+    }
+    h5 {
+        text-align: center;
+    }
+}
+
+    // thumbnail gallery image-swap rules
+
+.m2Page__thumbnailList {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.m2Page__mainPic {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+@include responsive(650px) {
+    .m2Page__mainPic {
+        width: auto;
+    } 
+}
+
+
+
+/* ---------- m3resume Project ---------- */
+
+    // asymmetrical 2-column grid
+
+    //starts with 1 column for mobile
+.m3Page__2colGrid {
+    display: grid;
+    grid-template-rows:
+        [row1-start] auto
+        [row2-start] auto
+        [row3-start] auto;
+    grid-template-columns: [column1] 100%;
+    grid-template-areas: 
+        "area1"
+        "area2"
+        "area3";
+}
+
+    //rearranges to 2 columns on larger screens
+@include responsive(650px) {
+    .m3Page__2colGrid {
+        display: grid;
+        grid-template-rows: 
+            [row1-start] auto
+            [row2-start] auto;
+        grid-template-columns: 
+            [col1] 1.5fr
+            [col2] 1fr;
+        grid-template-areas: 
+            "area1 area2"
+            "area1 area3";
+    }
+}
+
+.m3Page__2colArea1 {
+    grid-area: area1;
+}
+
+.m3Page__2colArea2{
+    grid-area: area2;
+    background-color: $myOrange;
+    padding: 0 1rem;
+}
+
+.m3Page__2colArea3{
+    grid-area: area3;
+    background-color: $myOrange;
+    padding: 0 1rem;
+}
+
+    //general styles
+
+.m3Page__2colGrid {
+    margin-top: 0;
+}
+
+.m3Page__resHolder {
+    margin-bottom: 2rem;
+    border-left: .2rem solid $myOrange;
+    border-bottom: .2rem solid $myOrange;
+    min-height: 30rem;
+}
+
+.m3Page__contact {
+    background-color: $myDarkBlue;
+    color: $myLightGray;
+    padding-top: 1px;
+    padding-left: .5rem;
+}
+
+.m3Page__contact ul {
+    margin-bottom: 0;
+}
+
+.m3Page__skills ul {
+    background-color: $myWhite;
+}
+
+.m3Page__schools {
+    padding: .5rem;
+    background-color: $myWhite;
+}
+
+.m3Page__jobListing dd {
+    border-bottom: .1 solid $myLightGray;
+}
+
+.m3Page__experience {
+    background-color: $myWhite;
+    padding-left: .5rem;
+}
+
+.m3Page__jobListing dd {
+    color: $myOrange;
+    font-size: 1.1rem;
+}
+
+
+    // scripting related styles
+
+.m3Page__experience {
+    //this makes the experience-listings invisible and also positions it 200px lower than it's default position. Then the javascript can "animate" them upward and "fade in" to make them non-invisible.
+    position: relative;
+	top: 5rem;
+    display: none;
+    z-index: -1; //keeps this element from appearing on top of the nav-bar
+}
+
+.m3Page__skills, .m3Page__education {
+    //these rules do the same thing as the m3Page__experience above, but they're positioned off to the right instead of below.
+    position: relative;
+	left: 20rem;
+    display: none;
+    z-index: -1; //keeps this element from appearing on top of the nav-bar
+}
+

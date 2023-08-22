@@ -1,0 +1,9 @@
+
+
+/* Mixins: functions to replace repetitive code */
+
+@mixin responsive($pixels) {
+    @media screen and (min-width: $pixels) {
+        @content;
+    }
+}

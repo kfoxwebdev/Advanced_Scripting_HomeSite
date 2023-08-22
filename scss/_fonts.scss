@@ -1,0 +1,158 @@
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+
+.globalPage__htmlElement {
+    font-family: 'Varela Round', Verdana, sans-serif;
+    color: $myBlack;
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Comfortaa', Verdana, sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1.25rem;
+}
+
+.globalPage__headerText{
+    border-right: .2rem solid $myOrange;
+    margin: 1rem 0;
+    padding: 0 .5rem;
+    h1{
+        color: $myLightGray;
+        font-size: 1.25rem;
+        line-height: 1;
+        margin: .5rem 0;
+    }
+    h2{
+        color: $myLightGray;
+        font-size: .75rem;
+        line-height: 1;
+        margin: .5rem 0;
+    }
+}
+
+
+.globalPage__footer {
+    font-size: 0.9rem;
+    font-style: italic;
+    bottom: 0;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+/* ---------- main nav menu font styles ---------- */
+
+    /* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+
+.globalPage__primaryNavList{
+    li {
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            padding: .5em 1em;
+            text-decoration: none;
+                &:link { 
+                    color: $myDarkBlue;
+                }
+
+                &:visited { 
+                    color: $myDarkBlue;
+                }
+
+                &:hover {
+                    color: $myDarkBlue;
+                }	
+
+                &:active {
+                    color: $myDarkBlue;
+                }
+        }
+    }
+}
+
+
+
+/* ---------- Card font styles ---------- */
+
+.globalPage__cardLink {
+    font-size: .85rem;
+    text-decoration: none;
+        &:link { 
+            color: $myDarkBlue;
+        }
+        &:visited { 
+            color: $myDarkBlue;
+        }
+        &:hover {
+            color: $myDarkBlue;
+        }	
+        &:active {
+            color: $myDarkBlue;
+        }
+}
+
+
+/* ---------- Call to Action (on homepage) ---------- */
+
+.call2action__linkArea {
+    color: $myDarkBlue;
+    a {
+        text-decoration: none;
+        &:link { 
+            color: $myDarkBlue;
+        }
+        &:visited { 
+            color: $myDarkBlue;
+        }
+        &:hover {
+            color: $myDarkBlue;
+        }	
+        &:active {
+            color: $myDarkBlue;
+        }
+    }
+}
+
+
+
+/* ---------- Exercise-page list-fonts ---------- */
+
+.exercisePage__listBox {
+    h4 {
+        color: $myOrange;
+    }
+    a {
+        text-decoration: none;
+        &:link { 
+            color: $myDarkBlue;
+        }
+        &:visited { 
+            color: $myDarkBlue;
+        }
+        &:hover {
+            color: $myDarkBlue;
+        }	
+        &:active {
+            color: $myDarkBlue;
+        }
+    }
+}
+

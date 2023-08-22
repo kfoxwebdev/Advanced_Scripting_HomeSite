@@ -1,0 +1,97 @@
+
+/* Layout: dedfault sizing is for smartphones, with media queries for larger screens */
+
+
+
+/* ---------- default/smartphone layout rules ---------- */
+
+.globalPage__body {
+    margin: 0%;
+}
+    
+.globalPage__main {
+    padding: 0 1rem;
+}
+
+
+/* ---------- tablet layout rules ---------- */
+
+@include responsive(650px) {
+    
+    .globalPage__main {
+        margin: 0% 5%;
+    }
+    
+    .globalPage__headerText {
+        h1 {
+        font-size: 3rem;
+        }
+        h2 {
+        font-size: 1.5rem;
+        }
+    }
+    
+    .globalPage__primaryNavList {
+        /* changes navbar from vertical to horizontal on bigger screens */
+        height: auto;
+        top: auto;
+        margin: 0;
+        flex-direction: row;
+        width: 100%;
+        transform: translateY(0%);
+    }
+
+    .globalPage__primaryNavburger{
+	//the burger menu button only needs to be visible on mobile screens
+        display: none;
+    }
+    
+    .globalPage__cardsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    
+}
+
+
+
+@include responsive(800px) {
+    
+    .m6article__summary, .m6article__fullArticle {
+        
+        picture {
+            float: left;
+            padding: 1em;
+        }
+        
+        ul {
+            clear: left;
+        }
+        
+        p {
+            padding: 1em 0 0 0;
+        }
+        
+    }
+}
+
+
+@include responsive(1000px) {
+    .globalPage__main {
+    margin: 0% 15%;
+  }
+}
+
+
+
+/* ---------- desktop layout rules ---------- */
+
+@include responsive(1500px) {
+    .globalPage__main {
+        margin: 0% auto;
+        max-width: 1000px;
+    }
+
+}

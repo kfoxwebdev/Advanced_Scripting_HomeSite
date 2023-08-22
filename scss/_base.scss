@@ -1,0 +1,51 @@
+
+
+/* Base: general rules for the foundational components of the site */
+
+/* ---------- General sizing: border box with inheriting ---------- */
+
+.globalPage__htmlElement {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/* ---------- main page/body colors & styles ---------- */
+
+.everyPage__htmlElement {
+    background-color: $myWhite;
+}
+
+
+
+/* ---------- skip link styles ---------- */
+
+/* visually hide skip links */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* make skip links visible on focus */
+.visually-hidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    width: auto;
+    /* Adjust the remaining properties to match design */
+    outline: none;
+    top: 6rem;
+    left: 2rem;
+}
