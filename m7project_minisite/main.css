@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Doc */
+
+* {
+	margin: 1rem;
+	font-family: Calibri, sans-serif;
+}
+
+header img {
+	display: block;
+	margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+body {
+	background-color: #585652;
+    margin: 2rem 8rem;
+}
+
+p {
+	text-indent: 1rem;
+}
+
+main {
+	padding: .5rem;
+	background-color: #dddddd;
+	border-radius: 5px;
+}
+
+h1, h2 {
+	background-color: #bc4b29;
+    color: #dddddd;
+    margin: 1rem 0;
+    padding: .5rem;
+}
+
+dt {
+	font-weight: bold;
+}
+
+.M7page__allInputs {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.m7page__inputButtons {
+    display: flex;
+}
+
+input[type=button] {
+    margin: 0;
+}
+
+input[type=text] {
+    margin: 0;
+}
+
+.m7page__theStory {
+    border: 2px solid #bc4b29;
+    border-radius: 5px;
+}
+
+.m7page__displayInput {
+    background-color: white;
+    border-radius: 2px;
+    margin: 0 0.1rem;
+    padding: 0 0.25rem;
+}
+
+footer {
+	text-align: right;
+}

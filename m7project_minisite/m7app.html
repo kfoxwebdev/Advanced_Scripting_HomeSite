@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>KFox M7 App</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+   
+    <header>
+        <h2>Web Storage App</h2>
+    </header>
+    
+    <main>
+        <p>This app lets users make or change a mad-libs story. Our javascript takes whatever the user types in each box box, and adds it to a local storage object. Additional submissions can be concatenated to each object, which are then displayed in the story at the bottom of the page. This allows users to submit multiple words in a row and see all of their submissions added to the story. The "clear" buttons run a scrpit that removes the local storage objects to reset the story. Try it out below!</p>
+        
+        <div class="M7page__allInputs">
+        
+        <div class="m7page__adjInput">
+        <div>
+            <label for="adjective">Adjective(s)</label>
+            <br>            
+            <input type="text" name="adjective" id="adjective">
+        </div>
+        
+        <div class="m7page__inputButtons">
+            <input type="button" name="addAdj" id="addAdj" value="Add Adjective"><br>
+            
+            <input type="button" name="clearAdj" id="clearAdj" value="Clear">
+        </div>
+        </div><!-- END m7page__adjInput-->
+        
+        
+        <div class="m7page__advInput">
+        <div>
+            <label for="adverb">Adverb(s)</label>
+            <br>     
+            <input type="text" name="adverb" id="adverb">
+        </div>
+        
+        <div class="m7page__inputButtons">
+            <input type="button" name="addAdv" id="addAdv" value="Add Adverb"><br>
+            
+            <input type="button" name="clearAdv" id="clearAdv" value="Clear">
+        </div>
+        </div><!-- END m7page__advInput-->
+        
+        
+        <div class="m7page__foodInput">
+        <div>
+            <label for="food">Food(s)</label>
+            <br>     
+            <input type="text" name="food" id="food">
+        </div>
+        
+        <div class="m7page__inputButtons">
+            <input type="button" name="addFood" id="addFood" value="Add Food"><br>
+            
+            <input type="button" name="clearFood" id="clearFood" value="Clear">
+        </div>
+        </div><!-- END m7page__foodInput-->
+        
+        </div><!-- END M7page__allInputs-->
+        
+        
+        <div class="m7page__theStory">
+        <h3>Mad Libs Story</h3>
+        
+        <p>One day, Tim was feeling very
+            <span class="m7page__displayInput" id="adjList"></span> 
+            and hungry. He went to the local Super Buffet as
+            <span class="m7page__displayInput" id="advList"></span> 
+            and quickly as he could. Within 20 minutes, he ate
+            <span class="m7page__displayInput" id="foodList"></span> and a complimentary mint.</p>
+        </div><!-- END M7page__theStory-->
+        
+        
+    </main>
+    
+    <footer>
+	<p>&copy; K Fox 2023</p>
+	</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="m7appScript.js"></script>
+
+</body>
+</html>
