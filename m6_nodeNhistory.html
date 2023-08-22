@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Node.js M6 Project</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js and user-generated arguments. There are also history-objects that work with site navigation">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Node.js Location Object, History Object, and Arguments</h3>
+    
+    <p>In our previous unit, we learned that Node.js is a JavaScript runtime environment that can run scripts or other applications outside of a browser. In this unit, we worked with some of the built-in modules that work like extra sets of Javascript libraries. These modules can be loaded by using the built-in require() function. We tried out the "fs" module, which has functions for working with the local file system, and even functions for reading and writing files.</p>
+    
+    <p>Next, we learned how to use location objects and history objects to redirect or reload the browser. This allows us to have similar functionality to hyperlinks, while being able to use or even manipulate the browser's history instead of linking to specific URL's.</p>
+    
+    <p>Finally, we learned how to pass arguments to a script using the Command Prompt window. We did this with the process-object combined with the argv-property. The argv-property places our arguments in an array after the path to the node command and the path to the script. These arguments can be used within the script itself.</p>
+      
+    <h4>Location and History Objects Project</h4>
+        
+        <p>Both of these buttons use a Javascript history-object rather than a typical hyperlink. The "back" button uses the history.back method to load the most recent page from the browser's history. The "home" button uses the history.go method to go two steps back, which is enough to get to the home page.</p>
+        
+        <input type="button" id="backBttn" value="Back">
+        <input type="button" id="homeBttn" value="Home">
+        <!-- these buttons work with the embedded script at the bottom of this document -->
+      
+    <h4>Argument Project</h4>
+        
+        <p>In this project, I made a script that accepts 2 string arguments and a numerical argument. The numerical argument is used to in a quick calculation, and then all the arguments are used to create a funny story (a new string). My script then writes that information into a separate text document as well as displaying it in the Command Prompt window. The below screenshots show the code along with a step by step explanation, and we see screenshots of the results afterward. </p>
+        
+        <img
+            alt=""
+            src="images/m6_jsPics/script_code800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/m6_jsPics/script_code500.png 500w,
+                    images/m6_jsPics/script_code800.png 800w"
+        >
+        
+        <p>Below we see what happens when a user runs the script without any parameters.</p> 
+      
+        <img
+            alt=""
+            src="images/m6_jsPics/script_resultError800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/m6_jsPics/script_resultError500.png 500w,
+                    images/m6_jsPics/script_resultError800.png 800w"
+        >
+      
+        <p>Here is what happens when the user runs our script with parameters. </p>
+        
+        <img
+            alt=""
+            src="images/m6_jsPics/script_resultStory800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/m6_jsPics/script_resultStory500.png 500w,
+                    images/m6_jsPics/script_resultStory800.png 800w"
+        >
+        
+        <p>We can also open the new storyDoc.txt file to see that the script has also written my story into that document.</p>
+        
+        <img
+            alt=""
+            src="images/m6_jsPics/textDoc800.png"
+            sizes="(min-width: 800px) 800px,
+                   (min-width: 200px) 500px,
+                    100vw"
+            srcset="images/m6_jsPics/textDoc500.png 500w,
+                    images/m6_jsPics/textDoc800.png 800w"
+        >
+        
+       
+    
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+    <script src="scripts/jquery-3.6.3.js"></script>
+    
+    <script>
+        $("#backBttn").click(function() {
+            history.back(); //when clicking the back-button, it loads the most recent item from the browser history
+        });
+        
+        $("#homeBttn").click(function() {
+            history.go(-2); //when clicking the home-button, it goes 2 steps back in the browser history, which is enough to get back to the home page
+        });
+    </script>
+
+
+</body>
+
+</html>

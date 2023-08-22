@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Node.js Project</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Scripting Project with Node.js</h3>
+    
+    <p>As mentioned in the M5 exercise, Node.js is a JavaScript runtime environment that can run scripts or other applications outside of a browser. It's a useful way to test script/code without creating a full webpage to run them. Users can simply use the Command Prompt window to select the directory which contains the desired script. By typing "node " followed by the file-name of the script, the code runs and any results are displayed in the Command Prompt window. </p>
+    
+    <p>We'll take a look at a quick project using Node.js below. This project is a set of 3 linked scripts that that start with 2 pieces of data, a height and width measurement (in feet). The scripts then calculate how much paint would be needed to cover that area, and generate a vew variable statements based on the measurements/calculations.</p>
+    
+    <p>In a more practical application, the height and width could be gathered from user input. However, for the purpose of testing the scripts and their calculations, I simply declared the height/width as variables. Much of the code is explained in comments within the Javascript documents, but I am including brief descriptions on this page too.</p>
+    
+    
+    <h4>M05_variables.js</h4>
+        
+        
+        <img
+            alt=""
+            src="images/m5_jsPics/variables_code670.png"
+            sizes="(min-width: 800px) 670px,
+                   (min-width: 200px) 400px,
+                    100vw"
+            srcset="images/m5_jsPics/variables_code400.png 400w,
+                    images/m5_jsPics/variables_code670.png 670w"
+        >
+        
+        <p>In M05_variables.js (the first script pictured above), $height and $width are set to numeric values. We also use module.exports to make the data shareable to other files.</p>
+        
+    <h4>M05_function.js</h4>
+        
+        <img
+            alt=""
+            src="images/m5_jsPics/function_code661.png"
+            sizes="(min-width: 800px) 661px,
+                   (min-width: 200px) 400px,
+                    100vw"
+            srcset="images/m5_jsPics/variables_code400.png 400w,
+                    images/m5_jsPics/variables_code670.png 661w"
+        >
+        
+        <p>M05_function.js uses the height and width measurements (imported from M05_variables.js) to calculate how many gallons of paint would be needed to paint an area with those dimensions. Again, we use module.exports to make this new data shareable to other files.</p>
+        
+    <h4>M05_mainApp.js</h4>
+       
+        <p>(This script is broken into two images.)</p>
+        
+        <img
+            alt=""
+            src="images/m5_jsPics/mainApp_code1_678.png"
+            sizes="(min-width: 800px) 678px,
+                   (min-width: 200px) 400px,
+                    100vw"
+            srcset="images/m5_jsPics/mainApp_code1_400.png 400w,
+                    images/m5_jsPics/mainApp_code1_678.png 678w"
+        >
+        
+        
+        <p> In the final script, we import the measurements from M05_variables.js and the number of gallons calculated from M05_function.js. First, we use console.log to generate a statement quoting how many gallons were calculated in M05_function.js. Next, we use a while-loop with console.log to generate statements quoting each of the measurements from M05_variables.js. Next, we use a conditional (ternary) operator to evaluate how many gallons are needed. If the condition in the parenthesis (less than 10 gallons of paint) is true, the value before the colon is returned. If the condition is false, it returns the value after the colon.</p>
+        
+        <p>(continued in the second image below)</p>
+        
+        <img
+            alt=""
+            src="images/m5_jsPics/mainApp_code2_675.png"
+            sizes="(min-width: 800px) 675px,
+                   (min-width: 200px) 400px,
+                    100vw"
+            srcset="images/m5_jsPics/mainApp_code2_400.png 400w,
+                    images/m5_jsPics/mainApp_code2_675.png 675w"
+        >
+        
+        <p>Next, we use console.log to display the results of the ternary operator from the first image. Lastly, we use a Switch Statement to console.log different values based on the measured height from M05_variables.js. For the sake of simplicity, we made the cases a series of whole numbers to compare with our measurement. Many of the cases fall-through to the one below, so that each value covers a range of measurements.</p>
+        
+        <p>Below, we see the result of running M05_mainApp.js in the command prompt window.</p>
+        
+        <img
+            alt=""
+            src="images/m5_jsPics/mainApp_results634.png"
+            sizes="(min-width: 800px) 634px,
+                   (min-width: 200px) 400px,
+                    100vw"
+            srcset="images/m5_jsPics/mainApp_results400.png 400w,
+                    images/m5_jsPics/mainApp_results634.png 634w"
+        >
+        
+        <img src="images/m5_jsPics/mainApp_results.png" alt="">
+        
+        <p>As we can see, the aforementioned messages are displaying about the measurements and the gallons of paint needed. While the numerical values (height, width, and gallons) were calculated from the first two scripts, we only had to run our final script since it imports the first two.</p>
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

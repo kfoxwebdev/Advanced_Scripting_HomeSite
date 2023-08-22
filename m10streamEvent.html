@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox M10 Project</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js streams and events.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>M10 Project</h3>
+        
+    <p>For this project, I made a script that creates 3 event emitters that accept an argument, make calculations with it, and write those calculations in a text-document. Then I made a second script that streams the text-document to a server which can be viewed in the browser.</p>
+    
+    <p>For reference, you can learn more about events and streams from the <a href="exercise_pages/M10_events/index.html" target="_blank">M10 Events Exercise</a> and the <a href="exercise_pages/M10_streams/index.html" target="_blank">M10 Streams Exercise</a>.</p>
+    
+    <p>The first document in my project is a script called events.js that uses event emitters to accept user input and create a .txt document</p>
+        
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/eventsJS800.png">
+    
+    <p>When we run events.js in the console, we get the aforementioned output as well as our newly created inputX1000.txt file.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/consoleFirst800.png"> 
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/consoleSecond800.png"> 
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/inputX1000TXT800.png"> 
+    
+    <p>The makeServer.js script creates a server and streams the text document.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/makeServerJS800.png">
+    
+    <p>Below, we see the results of running makeServer.js in the console.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/consoleThird800.png">    
+   
+    <img class="globalpage__resizeImg" alt="" src="images/m10_jsPics/browser800.png"> 
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

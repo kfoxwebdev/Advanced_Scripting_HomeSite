@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox M7 Project</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js to test a local server. ">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Web Storage and Node Servers</h3>
+    
+    <p>In this unit we learned how to work with web storage as well as Node's built in HTTP module to create a local server. For this project I wrote a JavaScript file that creates a server and displays some web pages. Among them is a simple app that utilizes web storage.</p>
+    
+    <p>The <a href="exercise_pages/M7_webStorage/index.html" target="_blank">Web Storage Exercise</a> and <a href="exercise_pages/M7_httpServer/index.html" target="_blank">HTTP Server Exercise</a> pages both cover what we learned in greater detail. The screenshows below showcase this unit's project.</p>
+    
+    <p>First I made a script (called m7makeServer.js) that creates a local server and sends my site files as the response.</p>    
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/makeServerJS.png">
+    
+    <p>Next I used the console to run Node.js and my m7makeServer script, which also displays a console-log saying "server reached" to show it's working. Also note that all of my site pages and files are saved in the "m7serverSite" folder within the same directory as the m7makeServer.js script.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/consoleServerReached.png">
+    
+    <p>To view the pages on the server, I was able to use "localhost:8080" as the url in a browser.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/siteHome.png">
+    
+    <p>I also tested my 404-error page by trying a typo in the url.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/site404.png">
+    
+    <p>The site's app is explained in the screenshot below...</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/siteApp.png">
+    
+    <p>...and the below screenshots showcase the html and javascript that power the app.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/appHTML.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/m7_jsPics/appScriptJS.png">
+    
+    <p>You can try out the app <a href="m7project_minisite/m7app.html" target="_blank">here</a>.</p>
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+    <script src="scripts/jquery-3.6.3.js"></script>
+
+
+</body>
+
+</html>

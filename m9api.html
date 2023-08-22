@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Module 9</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page that uses Ajax and an API to update the pagewith data from a web server without reloading the page.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, portfolio, web design, web development, web dev, media specialist">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Nasa's Astronomy Picture of the Day</h3>
+        
+        <p>This project uses Nasa's <a href="https://api.nasa.gov/" target="_blank">Astrononomy Picture of the Day API</a> to display information based on user input. Click any of the buttons below to see information from each of the listed dates.</p>
+        
+        <div id="topics">
+			<button id="d1" type="button" value="&date=2023-01-01">Jan 1, 2023</button>
+			<button id="d2" type="button" value="&date=2022-01-01">Jan 1, 2022</button>
+			<button id="d3" type="button" value="&date=2021-01-01">Jan 1, 2011</button>
+            <button id="d4" type="button" value="&date=2020-01-01">Jan 1, 2020</button>
+            <button id="d5" type="button" value="&date=2019-01-01">Jan 1, 2019</button>
+		</div>
+		<div id="info"></div>
+      
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+    <script src="scripts/jquery-3.6.3.js"></script> 
+    <script src="scripts/m9script.js"></script>
+
+
+</body>
+
+</html>

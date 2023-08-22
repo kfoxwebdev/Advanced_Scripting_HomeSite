@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox M12 Project</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with API queries and parameters, organized in an MVC pattern.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>M12 Project</h3>
+        
+    <p>For this project, I made a json file called m12data.js with API data representing the roller coasters at a California amusement park called Knotts Berry Farm. This is very similar to the API from M11.</p>
+    
+    <p>Next I made a script called m12app.js which creates a server to display the API data (roller coasters). Back in M11, this script contained all the code to host the site and display/filter the API coasters. However, for my M12 project, I split this code across multiple files and folders to fit an MVC (Model-View-Control) pattern. This allowed me to keep each .js file shorter, while making the overall app neater and more organized.</p>
+    
+    <p>I also created three files with middleware functions that interact with the API coasters and display info in the Console.</p>
+    
+    <p>For reference, the contents of each file are pictured below.</p>
+        
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/filesRoot800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/filesView800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/filesControl800.png">
+    
+    <p>The view defines what is being displayed, and the control has the logic. The "node_modules" folder contains the package.json files and modules like Express. To summarize the functionality of the app, I am including the scripts and files below.</p>
+    
+    <p>(root folder)</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/m12dataJS800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/m12appJS800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/middleware1_800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/middleware2_800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/middleware3_800.png">
+    
+    <p>(control folder)</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/apiCoastersControllerJS800.png">
+    
+    <p>(view folder)</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/apiCoastersJS800.png">
+    
+    <p>To test my app, I ran my m12app.js script in the Console.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/console800.png">
+    
+    <p>After the server is running, I can view it at localhost:8080 in a browser. The home page shows the contents of my index.html file.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserHome800.png">
+    
+    <p>Now I can click the various links on the homepage to view or filter the API coasters, as well as testing the other two middleware functions.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserFullList800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserID800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserMid1_800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/consoleMid1_800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserMid2_800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/M12_jsPics/browserMid3_800.png">
+    
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>
