@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox NPM Express</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js and create a local using Express.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Scripting Exercise with Node.js framework</h3>
+    
+    <p>Express.js is a backend framework used for servers that work with web applications and APIs. It's an external module, so when we use it in our files, it must be imported before the included modules (like file system, path, http-server, etc). Express works very similarly to http-server as seen in our <a href="../M7_httpServer/index.html" target="_blank">M7 HTTP Server Exercise</a>. With express, this logic doesn't change. They both use server requests and responses. Express just simplifies the process with different methods.</p>
+    
+    <p>In this exercise, we started the same way as our <a href="../M8_package/index.html" target="_blank">M8 Packages Exercise</a>. First we opened the console and ran "npm init" to create our package.json file. Then we used the console to add express and nodemon as dependencies, storing them in the node_modules folder. Next we made a folder called "indexbanner" containing the files for a basic website. Finally, we made a script called "kfox_app.js" to make our local server and host the site.</p>
+    
+    <p>Below is a screenshot of our root folder containing our package files, indexbanner folder, and our script. I also included a screenshot of the site-files within indexbanner for reference. </p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/rootFiles800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/pageFiles800.png">
+    
+    <p>Here we can see the code of our package.json file, which also shows the express and nodemon dependencies.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/packageJSON800.png">
+    
+    <p>Our kfox_app.js script imports Express since it's an external module. Then we set up requests/responses to host all the files within our indexbanner folder. We also used console-log to confirm our server is working once we run the script.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/kfox_appJS800.png">
+    
+    <p>In the console, we used the "start" script from our package to run kfox_app.js. Below, we can see the console-log confirming that our server is active.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+    
+    <p>For reference, here's a screenshot with the contents of index.html. This is the home-page that we should see when we visit our server in a browser.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/indexHTML800.png">
+    
+    <p>As predicted, we can visit our server at "localhost:8080" in a browser. Our server displays the various pages and files of our site.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/homePage800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/aboutPage800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/404page800.png">
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

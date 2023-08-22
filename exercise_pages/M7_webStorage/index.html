@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>KF Task List</title>
+  <link type="text/css" rel="stylesheet" href="task_list.css">
+</head>
+<body>
+  <main>
+    <h1>Task List</h1> 
+    <div id="tasks">
+        <label for="task_list">Task List</label><br>
+        <textarea id="task_list" rows="6" cols="50"></textarea>
+    </div>
+    <div>
+        <label for="task">Task</label><br>
+        <input type="text" name="task" id="task">      
+    </div>    
+    <div>
+        <input type="button" name="add_task" id="add_task" value="Add Task"><br>
+        <input type="button" name="clear_tasks" id="clear_tasks" value="Clear Tasks">      
+    </div>
+	  
+	<p>
+	This application uses local storage to update the contents of this page. Our javascript takes whatever the user types in the "Task" box, and adds it to a local storage object called myTasks. Each new task is concatenated onto that MyTasks. Then our javascript sets the value of the "Task List" box to whatever is stored in myTasks. The "clear task" button triggers a script that removes myTasks from local storage, which deletes all of our listed tasks. Try adding or removing some tasks to see for yourself! 
+	</p>
+  </main> 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="task_list.js"></script>
+</body>
+</html>

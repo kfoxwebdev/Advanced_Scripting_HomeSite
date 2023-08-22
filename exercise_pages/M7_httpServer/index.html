@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Node HTTP Server</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A set of images and descriptions about some scripts created to work with Node.js and create a local HTTP server.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Scripting Exercise with Node.js HTTP Module &amp; Local Server</h3>
+    
+    <p>In this unit, we learned how to use the built-in HTTP module in Node. This module allows us to use a javascript file to create a local server for testing. First, we would import the module like so:</p>
+    
+    <p class="italic">const http = require('http');</p>
+    
+    <p>Next, we make a function we called called "server" (or whatever name we decide) that uses the createServer method (which is available through the HTTP module).</p>
+    
+    <p class="italic">const server = http.createServer((req,res)=>{ <br>
+    //Write the response here <br>
+    });</p>
+    
+    <p>The parameters "rec" and "res" could technically be called anything but it's general practice to name them as-is. This is because the first parameter is the request to the server, and the second one is the response (the data that the server sends back to the browser).</p>
+    
+    <blockquote>
+        <h4>Writing the Response</h4>
+        
+        <p>For the Response in our "server" function above, we can write a message, insert code, or send files. For most of these, we would use the writeHead() method, which tells the browser what it's supposed to do with the following code. Below is the format of how to use writeHead()</p>
+        
+        <p class="italic"> res.writeHead(status code, { [, statusMessage] [, headers] );</p>
+        
+        <p>The first argument, "status code" will most commonly be 200 (everything is okay) or 404 (file not found). There are many more codes that you can read about <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">here</a>. Optionally, you could give a human-readable statusMessage as the second argument. The last argument handles the header, telling the browser what kind of code it will display.</p>
+        
+        <p>The examples below would set up a head with a status code of 200  and various content types:</p>
+        
+        <p class="italic">
+            res.writeHead(200,{'content-type':'text/html'}); //html code
+            <br>
+            res.writeHead(200,{'content-type':'text/css'}); //css code
+            <br>
+            res.writeHead(200,{'content-type':'image/x-png'}); //.png image file
+            <br>
+            res.writeHead(200,{'content-type':'text/plain'}); //string value
+        </p>
+        
+        <p>Once we set up the head, we can use the write() method to actually write the content of our response. See the examples below:</p>
+        
+        <p class="italic">
+            response.write('This is a string.'); //write a string
+            <br>
+            response.write('&lt;h1&gt;Title&lt;/h1&gt;); //write html code
+        </p>
+        
+        <p>We can even write a document if we combine it with the file-system module. To do this, we would store the document in a constant before writing our "server" function, like so:</p>
+        
+        <p class="italic">
+            const homepage = readFileSync('index.html'); 
+            //stores the contents of "index.html" in a constant called "homepage"
+        </p>
+        
+        <p>Then within our response, we use the constant containing that document with the write() method as below:</p>
+        
+        <p class="italic">
+            res.write(homepage);
+        </p>
+        
+        <p>Once we've added our content, we need to end the response with the below code:</p>
+        
+        <p class="italic">res.end();</p>
+        
+    </blockquote>
+    
+    <p>Finally, we set up which port we will use for our browser access the server's response. For testing it is commonly set to 5000, but any number would work. In our exercise, we used 8080.</p>
+    
+    <p class="italic">server.listen(8080);</p>
+    
+    
+    <h3>Putting it All Together</h3>
+       
+    <p>We just covered a lot of different topics. Below, I am including an example of what the whole Javascript document would look like if we wanted to create a server that displays an html document as the response:</p>
+       
+    <p class="italic">
+        const http = require('http'); // import http module
+        <br>
+        const {readFileSync} = require('fs'); //import fs module
+        <br>
+        const MYhomepage = readFileSync('index.html'); 
+    </p>
+    
+    <p class="italic">
+        const server = http.createServer((req,res)=>{ 
+        <br>
+        res.writeHead(200,{'content-type':'text/html'});
+        <br>
+        res.write(MYhomepage);
+        <br>
+        res.end();
+        <br>
+        });
+    </p>
+    
+    <p class="italic">
+        server.listen(8080);
+    </p>
+    
+    To start the server, we would open the command prompt console, change the directory to the folder containing the above javascript document, and then type "node fileName.js" (or whatever the name of the javascript document). Then we should be able to open any browser and type "localhost:8080" as the URL. If the server is working, the browser will show us the contents of index.html. To close the server, we can type CTRL+C in the console.
+        
+    <h3>M07 Exercise: HTTP Server Site</h3>
+        
+        <p>In this exercise, we put all the information above into practice. We used a Javascript document called "m07_kfox.js" to create our server and write its response. More specifically, we used if-else statements within the response so that multiple documents could be written depending on which URL is typed into the browser.</p>
+        
+        <p>Also note that all of our site pages and files are saved in the "indexbanner" folder within the same directory as our m07_kfox.js file. For reference, the files and folders are shown below.</p>
+        
+        <img class="globalpage__resizeImg" alt="" src="images/rootFiles800.png">
+        
+        <img class="globalpage__resizeImg" alt="" src="images/siteFiles800.png">
+        
+        <p>This filepath can be seen in the code below when we create the constants that use readFileSync() for each file. The following image shows the contents of m07_kfox.js.</p>
+        
+        <img class="globalpage__resizeImg" alt="" src="images/m07_kfoxJS800.png">
+        
+        <p>Once we use Node.js to run m07_kfox.js in the console, we get a console-log showing that our server is working.</p>
+        
+        <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+        
+        <p>Finally, we can test our server in the browser by entering "localhost:8080" as the url. We can even test our 404-page by adding a typo to the url.</p>
+        
+        <img class="globalpage__resizeImg" alt="" src="images/siteHome800.png">
+        
+        <img class="globalpage__resizeImg" alt="" src="images/site404page800.png">
+    
+   
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>
