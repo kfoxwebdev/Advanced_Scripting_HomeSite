@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Mid to Route</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page with descriptions and images of scripts that use Middleware and Routes to display API data in a browser.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Mid to Route Exercise</h3>
+    
+    <p>This exercise has a similar outcome to the <a href="../M11_APIqueriesNparameters/index.html" target="_blank">API Queries &amp; Parameters</a> exercise from Module 11. However, in this module, we were able to split our script into separate files to help clean up the code and apply an MVC pattern.</p>
+    
+    <p>Middleware is a function available through Express. They are functions that have access to the request and response objects and the next function. This allows us to access a page, execute code, and then display it. We can also use middleware to change the request or the response objects. The way this is different from how we have been coding is that middleware lets us run a function without stopping the request-response cycle. You will see this method used a lot with logins. When a user logins in, we can use middleware to modify the response object so it sends information about the user from the database (req.user). We can also use middleware to query a database, making API calls, or handle errors.</p>
+    
+    <p>Routes are code that controls the URL or path to a document. In other words, they control the response to certain client requests.When you use the Route methods available in Express this can let you modify your application so you can apply a MVC pattern to it. This stands for Model-View-Control. This pattern helps you create neater, more organized applications. The Model sets up the data structure. Basically, it decides when we need to use what information. The view defines what is being displayed. In the case of this exercise, those are our routes. The control has our logic. This is where our functions, database queries, expressions, etc. will be found.</p>
+    
+    <p>In this exercise, we started by making a json file called data.js (this file is basically the same as the one from our M11 API Queries &amp; Parameters Exercise). Our API is set up so that we created a constant and assigned an array made of objects to it. The objects will hold the properties for each item.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/dataJS800.png">
+    
+    <p>In M11, all of our script was in one file called app.js. In this exercise, the functionality has been split across several files. For reference, I included screenshots of the folders containing each file.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/filesRoot800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/filesControllers800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/filesRoutes800.png">
+    
+    <p>The "node_modules" folder contains the package.json files and modules such as Express.</p>
+    
+    <p>Below, I am including the contents of each script that all work together with Routes to create a server, run middleware functions, and use parameters to filter our API items.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/appJS800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/app_daterJS800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/app_loggerJS800.png">
+    
+    <p>Next, we have the apiInfoCon.js file from our "controllers" folder.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/apiInfoConJS800.png">
+    
+    <p>We also have our apiInfo.js file from our "routes" folder.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/apiInfoJS800.png">
+    
+    <p>To test our script, we run app.js in the Console.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+    
+    <p>Now that our server is running, we can visit localhost:8080 in a browser. The home page shows the results of our app_dater middleware function. Once we've viewed the homepage, the console shows the results of our app_logger middleware function.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserHome800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/consoleLogger800.png">
+    
+    <p>Finally, we can try different URL's in the browser to view items from our API.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserInfo.png">
+
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserSingle800.png">
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

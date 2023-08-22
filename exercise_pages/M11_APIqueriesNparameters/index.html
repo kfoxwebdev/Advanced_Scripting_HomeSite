@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox API Queries/Parameters</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page with descriptions and images of scripts that use Queries and Parameters to display API data in a browser.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>API Queries &amp; Parameters Exercise</h3>
+    
+    <p>Sets allow us to create a collection of zero or more unique values. This means each value can only be used once in the set. To create a set use Set(). If you use optional array values in a set and any of them are duplicates, the constructor removes them. This constructor isn't the most flexible so you won't see sets too often.</p>
+    
+    <p>JSON is a format for storing and transporting data. This is usually done by creating some combination of arrays and objects. Because the JSON format uses an identical syntax to JavaScript this makes it easier to convert the JSON to native JavaScript objects.</p>
+    
+    <p>In this exercise, we started by making a json file called data.js. Rather than use an API made by an external source, we set up this small database ourselves. This way our API is set up so that we created a constant and assigned an array made of objects to it. The objects will hold the properties for each item.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/dataJS800.png">
+    
+    <p>Then we made a script called app.js. This script lets us start a server to display our API data (items). We also made a map with the properties we wanted to use from items. Then we pretended that we set up an UI that let the user filter the information. We would do that by sending a parameter through the URL. To test it practically, we wrote code that will let us type different parameters in the URL in order to filter items.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/appJS800.png">
+    
+    <p>Then we can use the Console to run app.js and start the server. Once doing so, we can visit the homepage in a browser.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserHome800.png">
+    
+    <p>We can also click the link on the homepage to view all the items in our data.js API.</p>
+    
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserLink800.png">
+    
+    <p>We can also try typing in URL's like the ones suggested in the comments of app.js to filter the items from data.js.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserItem2_800.png">
+    
+    <p>When we type an item number into the url, the console.log from app.js displays accordingly.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/consoleItem2.png">
+    
+    <p>Below we can see the results of typing the other types of parameters into the URL.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserSearch800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserSearchLimit800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserTypo800.png">
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

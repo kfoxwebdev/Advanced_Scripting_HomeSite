@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox POST</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page with descriptions and images of scripts for an app that uses POST to take an order and pass it onto the next page.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>POST Exercise</h3>
+    
+    <p>POST is a method that can fetch data. Thanks to Express, we can use a POST request to fetch data in Node as well. How it works is that your data is attached to the request object when it is posted. In the response, we can set up code that can extract the information from the request. This is often done by using the body-parser module as middleware.</p>
+    
+    <p>In this exercise, have an html page that accepts input from a user. We also made a script called server.js that creates a local server for the page, and uses Express and POST to manipulate that input and pass it to another page. We prevent invalid data from causing issues with our validator.js file. The code below explains the process in further detail.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/indexHTML800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/serverJS800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/validatorJS800.png">
+    
+    <p>Once we run server.js in the Console, we can visit the HTML page in a browser at localhost:8080, and test the app.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserHome800.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserHomeInput00.png">
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browserTotal800.png">
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>

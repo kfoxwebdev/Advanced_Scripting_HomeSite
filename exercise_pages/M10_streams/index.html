@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en" class="globalPage__htmlElement">
+
+
+
+<head>
+   
+    <title>KFox Streams Exercise</title>
+    
+    <!-- __________ meta and SEO __________ -->
+    <meta charset="utf-8">
+    <meta name="description" content="A page with descriptions and images showing scripts that stream a file from a document to a server.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Node.js, web design, web development, web dev, media specialist, server">
+    <meta name="author" content="Kelbe Fox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    
+    <!-- __________ site icon __________ -->
+    <link rel="icon" type="image/x-icon" href="images/siteIcon.svg">
+    
+    <!-- __________ external fonts __________ -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet"> <!-- Comfortaa (bold 700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> <!-- Varela Round -->
+    
+    
+    <!-- __________ Stylesheets __________ -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+
+
+<body class="globalPage__body">
+    
+    
+    <a class="visually-hidden" href="#skip2main">Skip to Main Content</a>
+    
+    
+    <div class="globalPage__navBarSticky">
+        <nav class="globalPage__primaryNav">
+            <menu class="globalPage__primaryNavList">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../exercises.html">Exercises</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+            </menu>
+        <!-- this div creates a "hamburger menu button" -->
+            <div class="globalPage__primaryNavburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!-- end "hamburger menu button" -->
+        </nav>
+    </div> <!-- end "globalPage__navBarSticky" -->
+    
+    
+    <header class="globalPage__header"> 
+        <img src="images/logoMain.svg" alt="" class="globalPage__headerLogo">
+        <div class="globalPage__headerText">
+            <h1>Kelbe Fox ID226</h1>
+            <h2>Advanced Web Scripting</h2>
+        </div>
+    </header>
+    
+    
+    
+  <main class="globalPage__main" id="skip2main">
+    
+    <h3>Streams Exercise</h3>
+    
+    <p>Streams are a way to read and write files, handle network communications, and manipulate information exchanges in an efficient way. Streams read data in chunks rather than all at once. This makes them more efficient with both memory and time. Rather than trying to load a super large file all at once and then waiting for it to be loaded before using it can create lag. If you load that large file a bit at a time, you can start using parts of it as it loads. By default, these chunks are 64*1024 bytes. It's also possible to change the size of the chunks.</p>
+    
+    <p>There is a useful method called stream.pipe() and its main purpose is to provide output of one stream as the input for another. So if we have a document named bigfile.txt it will let us read the file then write it to another output. This is exactly what we did in our exercise.</p>
+    
+    <p>First we made a script called bigfile-make.js that creates a large file called big.txt (a simple text file full of several lines of text).</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/bigfile-makeJS800.png">
+    
+    <p>Next, we made a script called index.js that streams big.txt and chunks it into pieces.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/indexJS800.png">
+    
+    <p>Then we made a script called server.js to create a local server and pipe big.txt to the browser.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/serverJS800.png">
+    
+    <p>Then we can run all 3 scripts in the console, as seen below. Note that after running index.js, our data is split into 2 chunks under 90k bytes each.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/console800.png">
+    
+    <p>We can also view the new big.txt file to confirm it has been created and populated with text.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/bigTXT800.png">
+    
+    <p>Finally, we can visit localhost:8080 in a browser, and use "inspect" as described in our server.js script.</p>
+    
+    <img class="globalpage__resizeImg" alt="" src="images/browser800.png">
+    
+    
+    
+    <footer class="globalPage__footer">
+        Copyright &copy; 2023 Kelbe Fox
+    </footer>
+
+   
+  </main>
+  
+  
+    <!-- __________ Scripts __________ -->
+    <script src="../../scripts/globalscripts.js"></script>
+
+
+</body>
+
+</html>
