@@ -1,0 +1,855 @@
+/* Mixins: functions to replace repetitive code */ /* Base: general rules for the foundational components of the site */
+/* ---------- General sizing: border box with inheriting ---------- */
+.globalPage__htmlElement {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ---------- main page/body colors & styles ---------- */
+.everyPage__htmlElement {
+  background-color: #f7f7f7;
+}
+
+/* ---------- skip link styles ---------- */
+/* visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+.globalPage__htmlElement {
+  font-family: "Varela Round", Verdana, sans-serif;
+  color: #121212;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Comfortaa", Verdana, sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+.globalPage__headerText {
+  border-right: 0.2rem solid #f44d1a;
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+}
+.globalPage__headerText h1 {
+  color: #e8d7e3;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+.globalPage__headerText h2 {
+  color: #e8d7e3;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.globalPage__footer {
+  font-size: 0.9rem;
+  font-style: italic;
+  bottom: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* ---------- main nav menu font styles ---------- */
+/* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+.globalPage__primaryNavList li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.globalPage__primaryNavList li a:link {
+  color: #333e6f;
+}
+.globalPage__primaryNavList li a:visited {
+  color: #333e6f;
+}
+.globalPage__primaryNavList li a:hover {
+  color: #333e6f;
+}
+.globalPage__primaryNavList li a:active {
+  color: #333e6f;
+}
+
+/* ---------- Card font styles ---------- */
+.globalPage__cardLink {
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.globalPage__cardLink:link {
+  color: #333e6f;
+}
+.globalPage__cardLink:visited {
+  color: #333e6f;
+}
+.globalPage__cardLink:hover {
+  color: #333e6f;
+}
+.globalPage__cardLink:active {
+  color: #333e6f;
+}
+
+/* ---------- Call to Action (on homepage) ---------- */
+.call2action__linkArea {
+  color: #333e6f;
+}
+.call2action__linkArea a {
+  text-decoration: none;
+}
+.call2action__linkArea a:link {
+  color: #333e6f;
+}
+.call2action__linkArea a:visited {
+  color: #333e6f;
+}
+.call2action__linkArea a:hover {
+  color: #333e6f;
+}
+.call2action__linkArea a:active {
+  color: #333e6f;
+}
+
+/* ---------- Exercise-page list-fonts ---------- */
+.exercisePage__listBox h4 {
+  color: #f44d1a;
+}
+.exercisePage__listBox a {
+  text-decoration: none;
+}
+.exercisePage__listBox a:link {
+  color: #333e6f;
+}
+.exercisePage__listBox a:visited {
+  color: #333e6f;
+}
+.exercisePage__listBox a:hover {
+  color: #333e6f;
+}
+.exercisePage__listBox a:active {
+  color: #333e6f;
+}
+
+/* Components: used on most pages, but only once per page */
+/* ---------- Header styles ---------- */
+.globalPage__header {
+  width: 100%;
+  background-color: #333e6f;
+  background-image: url(../images/slashPatternYellowOrange2.svg);
+  background-repeat: repeat-x;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.globalPage__headerLogo {
+  max-width: 4rem;
+  margin: 0.75rem;
+}
+
+@media screen and (min-width: 650px) {
+  .globalPage__headerLogo {
+    max-width: 5rem;
+  }
+}
+/*
+.globalPage__headerForgroundSVG {
+    background-size: cover;
+    background-image: url(../images/headerForground.svg);
+}
+*/
+.globalPage__header--homePage {
+  height: 23rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.globalPage__headerLogo-home {
+  max-width: 10rem;
+}
+
+/* ---------- main nav bar positioning & styles ---------- */
+.globalPage__navBarSticky { /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.globalPage__primaryNav {
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 2.5rem;
+  -webkit-box-shadow: 0 0.15rem 0.75rem 0.1rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0.15rem 0.75rem 0.1rem rgba(0, 0, 0, 0.18);
+}
+
+.globalPage__primaryNavList {
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.globalPage__primaryNavList li a:hover {
+  background-color: #eaeaea;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.globalPage__primaryNavList li a:active {
+  background-color: #dedede;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.globalPage__primaryNavList--active {
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.globalPage__primaryNavburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333e6f;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.globalPage__primaryNavburger {
+  padding: 0.25em;
+  display: block;
+  cursor: pointer;
+}
+.globalPage__primaryNavburger:hover {
+  background-color: #eaeaea;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.burgerX .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burgerX .line2 {
+  opacity: 0;
+}
+
+.burgerX .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---------- Call to Action (on homepage) ---------- */
+.globalPage__call2action {
+  margin: 2rem 0;
+}
+
+.call2action__linkArea {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+  border-left: 0.2rem solid #f44d1a;
+}
+
+.call2action__linkButton {
+  color: #333e6f;
+  background-color: #fcc50f;
+  width: 6rem;
+  padding: 0.8rem 0;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.call2action__linkButton:hover {
+  background-color: #fdd141;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.call2action__linkButton:active {
+  background-color: #efb803;
+}
+
+.call2action__descArea {
+  background-color: #e8d7e3;
+  padding: 1rem;
+  border-bottom: 0.2rem solid #f44d1a;
+}
+
+/* ---------- Footer styles ---------- */
+.globalPage__footer {
+  color: #333e6f;
+  background-color: #e8d7e3;
+}
+
+/* ---------- M2 jQuery Intro Project ---------- */
+.m2Page__tabsHolder {
+  background-color: #e8d7e3;
+  padding: 1rem;
+}
+
+.m2Page__tabsHolder h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.m2Page__tabsHolder h4 {
+  background-color: #f7f7f7;
+  color: #333e6f;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid #f44d1a;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.m2Page__tabsHolder h4 img {
+  max-width: 0.8rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.m2Page__tabsHolder h4:hover {
+  background-color: #dedede;
+}
+.m2Page__tabsHolder h4:hover img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.m2Page__tabContents {
+  display: none;
+  background-color: #f7f7f7;
+  margin-top: -1.7rem;
+  padding: 1rem;
+  border-left: 0.1rem solid #f44d1a;
+}
+.m2Page__tabContents p {
+  margin-top: 0;
+}
+.m2Page__tabContents h5 {
+  text-align: center;
+}
+
+.m2Page__thumbnailList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.m2Page__mainPic {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 650px) {
+  .m2Page__mainPic {
+    width: auto;
+  }
+}
+/* ---------- m3resume Project ---------- */
+.m3Page__2colGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [row1-start] auto [row2-start] auto [row3-start] auto;
+  grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto;
+  -ms-grid-columns: [column1] 100%;
+  grid-template-columns: [column1] 100%;
+      grid-template-areas: "area1" "area2" "area3";
+}
+
+@media screen and (min-width: 650px) {
+  .m3Page__2colGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: [row1-start] auto [row2-start] auto;
+    grid-template-rows: [row1-start] auto [row2-start] auto;
+    -ms-grid-columns: [col1] 1.5fr [col2] 1fr;
+    grid-template-columns: [col1] 1.5fr [col2] 1fr;
+        grid-template-areas: "area1 area2" "area1 area3";
+  }
+}
+.m3Page__2colArea1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+.globalPage__2colGrid > .m3Page__2colArea1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+}
+
+.m3Page__2colArea2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area2;
+  background-color: #f44d1a;
+  padding: 0 1rem;
+}
+
+.globalPage__2colGrid > .m3Page__2colArea2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.m3Page__2colArea3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: area3;
+  background-color: #f44d1a;
+  padding: 0 1rem;
+}
+
+.m3Page__2colGrid {
+  margin-top: 0;
+}
+
+.m3Page__resHolder {
+  margin-bottom: 2rem;
+  border-left: 0.2rem solid #f44d1a;
+  border-bottom: 0.2rem solid #f44d1a;
+  min-height: 30rem;
+}
+
+.m3Page__contact {
+  background-color: #333e6f;
+  color: #e8d7e3;
+  padding-top: 1px;
+  padding-left: 0.5rem;
+}
+
+.m3Page__contact ul {
+  margin-bottom: 0;
+}
+
+.m3Page__skills ul {
+  background-color: #f7f7f7;
+}
+
+.m3Page__schools {
+  padding: 0.5rem;
+  background-color: #f7f7f7;
+}
+
+.m3Page__jobListing dd {
+  border-bottom: 0.1 solid #e8d7e3;
+}
+
+.m3Page__experience {
+  background-color: #f7f7f7;
+  padding-left: 0.5rem;
+}
+
+.m3Page__jobListing dd {
+  color: #f44d1a;
+  font-size: 1.1rem;
+}
+
+.m3Page__experience {
+  position: relative;
+  top: 5rem;
+  display: none;
+  z-index: -1;
+}
+
+.m3Page__skills, .m3Page__education {
+  position: relative;
+  left: 20rem;
+  display: none;
+  z-index: -1;
+}
+
+/* Modules: items that can be used multiple times per page */
+/* ---------- Card Rules ---------- */
+.globalPage__cardsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.globalPage__card {
+  height: 17rem;
+  width: 14rem;
+  margin: 2rem 0.25rem;
+  border-right: 0.2rem solid #f44d1a;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.globalPage__card:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 0 0.75rem 0.2rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 0.75rem 0.2rem rgba(0, 0, 0, 0.18);
+}
+.globalPage__card:hover .globalPage__cardPic {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.globalPage__cardPic {
+  display: block;
+  position: relative;
+  z-index: -2;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.globalPage__cardBody {
+  background-color: #e8d7e3;
+}
+
+.globalPage__cardTitle {
+  background-color: #fcc50f;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.globalPage__cardDesc {
+  padding: 0.5rem;
+  margin: 0;
+}
+
+/* ---------- 2-Column Grid Rules ---------- */
+.globalPage__2colGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [row1-start] auto [row2-start] auto;
+  grid-template-rows: [row1-start] auto [row2-start] auto;
+  -ms-grid-columns: [column1] 100%;
+  grid-template-columns: [column1] 100%;
+      grid-template-areas: "area1" "area2";
+}
+
+@media screen and (min-width: 650px) {
+  .globalPage__2colGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: [row1-start] auto;
+    grid-template-rows: [row1-start] auto;
+    -ms-grid-columns: [col1] 1fr [col2] 1fr;
+    grid-template-columns: [col1] 1fr [col2] 1fr;
+        grid-template-areas: "area1 area2";
+  }
+  .globalPage__2colGrid > .m3Page__2colArea1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .globalPage__2colGrid > .m3Page__2colArea2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+.globalPage__2colArea1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+.globalPage__2colGrid > .globalPage__2colArea1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+}
+
+.globalPage__2colArea2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area2;
+}
+
+.globalPage__2colGrid > .globalPage__2colArea2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+@media screen and (min-width: 650px) {
+  .m3Page__2colArea1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+  .m3Page__2colArea2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .m3Page__2colArea3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .globalPage__2colArea1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+  .globalPage__2colGrid > .globalPage__2colArea1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .globalPage__2colArea2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .globalPage__2colGrid > .globalPage__2colArea2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+
+/* ---------- Exercise-page List Rules ---------- */
+.exercisePage__listBox {
+  margin: 1.5rem 1.5rem 5rem 1.5rem;
+}
+.exercisePage__listBox h4 {
+  background-color: #333e6f;
+  padding: 0.5rem;
+  margin: 0;
+}
+.exercisePage__listBox dl {
+  margin: 0;
+  padding: 0.5rem;
+  border-left: 0.2rem solid #f44d1a;
+}
+.exercisePage__listBox dt {
+  padding: 0.5rem 0;
+}
+.exercisePage__listBox a {
+  padding: 0.25rem;
+  background-color: #fcc50f;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.18);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.exercisePage__listBox a:hover {
+  background-color: #fdd141;
+  padding: 0.3rem;
+}
+.exercisePage__listBox a:active {
+  background-color: #efb803;
+}
+
+/* ---------- Float Rules (can add to any element) ---------- */
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+/* ---------- Horizontal list (can add to any element) ---------- */
+@media screen and (min-width: 1200px) {
+  .horizList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/* ---------- Simple IMG Responsive Resizing ---------- */
+.globalpage__resizeImg {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+/* Layout: dedfault sizing is for smartphones, with media queries for larger screens */
+/* ---------- default/smartphone layout rules ---------- */
+.globalPage__body {
+  margin: 0%;
+}
+
+.globalPage__main {
+  padding: 0 1rem;
+}
+
+/* ---------- tablet layout rules ---------- */
+@media screen and (min-width: 650px) {
+  .globalPage__main {
+    margin: 0% 5%;
+  }
+  .globalPage__headerText h1 {
+    font-size: 3rem;
+  }
+  .globalPage__headerText h2 {
+    font-size: 1.5rem;
+  }
+  .globalPage__primaryNavList {
+    /* changes navbar from vertical to horizontal on bigger screens */
+    height: auto;
+    top: auto;
+    margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .globalPage__primaryNavburger {
+    display: none;
+  }
+  .globalPage__cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 800px) {
+  .m6article__summary picture, .m6article__fullArticle picture {
+    float: left;
+    padding: 1em;
+  }
+  .m6article__summary ul, .m6article__fullArticle ul {
+    clear: left;
+  }
+  .m6article__summary p, .m6article__fullArticle p {
+    padding: 1em 0 0 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .globalPage__main {
+    margin: 0% 15%;
+  }
+}
+/* ---------- desktop layout rules ---------- */
+@media screen and (min-width: 1500px) {
+  .globalPage__main {
+    margin: 0% auto;
+    max-width: 1000px;
+  }
+}
